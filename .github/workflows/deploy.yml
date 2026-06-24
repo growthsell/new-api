@@ -72,6 +72,6 @@ jobs:
           script: |
             cd /home/ubuntu/new-api
             docker compose pull new-api
-            docker compose up -d new-api
+            docker compose up -d --force-recreate new-api
             docker image prune -f
             echo "Deploy completed at $(date)"
